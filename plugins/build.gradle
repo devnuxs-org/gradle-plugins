@@ -32,7 +32,7 @@ publishing {
     repositories {
         maven {
             name = "Gitea"
-            url = uri("https://git.drmaniac.de/api/packages/qloud/maven")
+            url = uri("https://git.drmaniac.de/api/packages/qloud/packages/maven")
 
             credentials(HttpHeaderCredentials) {
                 name = "Authorization"
