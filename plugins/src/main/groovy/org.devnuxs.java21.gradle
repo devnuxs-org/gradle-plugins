@@ -1,0 +1,16 @@
+plugins {
+    id 'org.devnuxs.java'
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.compileJava {
+    dependsOn("spotlessApply")
+    options.encoding = "UTF-8"
+    options.compilerArgs.add("-parameters")
+}

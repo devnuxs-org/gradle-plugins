@@ -1,0 +1,14 @@
+plugins {
+    id 'org.devnuxs.repo'
+    id 'java'
+    id 'org.devnuxs.spotless'
+}
+
+group "${devnuxsGroupId}"
+version "${devnuxsVersion}"
+
+tasks.compileJava {
+    dependsOn("spotlessApply")
+    options.encoding = "UTF-8"
+    options.compilerArgs.add("-parameters")
+}
