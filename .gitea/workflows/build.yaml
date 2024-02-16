@@ -1,0 +1,25 @@
+name: Build and Publish
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: linux
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build with Gradle
+      run: ./gradlew build
+
+    - name: Publish to GitHub Packages
+      run: ./gradlew publish
+      env:
+        accessToken: ${{ secrets.DEPLOY_TOKEN }}
