@@ -27,12 +27,26 @@ dependencies {
     implementation "org.openapitools:openapi-generator-gradle-plugin:${openApiGeneratorVersion}"
 }
 
+gradlePlugin {
+    plugins {
+        id("org.devnuxs.spotless")
+        id("org.devnuxs.java")
+        id("org.devnuxs.java17")
+        id("org.devnuxs.java21")
+        id("org.devnuxs.openapi")
+        id("org.devnuxs.quarkus-k8")
+        id("org.devnuxs.quarkus")
+        id("org.devnuxs.repo")
+    }
+}
+
+
 publishing {
     // other settings of publication
     repositories {
         maven {
             name = "Gitea"
-            url = uri("https://git.drmaniac.de/api/packages/qloud/packages/maven")
+            url = uri("https://git.drmaniac.de/api/packages/repository/maven")
 
             credentials(HttpHeaderCredentials) {
                 name = "Authorization"
