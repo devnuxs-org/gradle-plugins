@@ -10,10 +10,11 @@ plugins {
     // Apply the groovy Plugin to add support for Groovy.
     id 'groovy-gradle-plugin'
     id 'maven-publish'
+    id 'pl.allegro.tech.build.axion-release' version '1.15.1'
 }
 
 group = 'org.devnuxs'
-version = '0.0.1-SNAPSHOT'
+version = scmVersion.version
 
 repositories {
     gradlePluginPortal()

@@ -1,0 +1,23 @@
+name: Release
+on:
+  workflow_dispatch:
+    
+
+jobs:
+  release:
+    runs-on: linux
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Configure Git user
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Create Release
+      run: ./gradlew release -Dorg.gradle.console=plain
+      env:
+        accessToken: ${{ secrets.DEPLOY_TOKEN }}
