@@ -8,6 +8,8 @@ jobs:
     runs-on: linux
     steps:
     - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.REPOSITORY_TOKEN }}
 
     - name: Configure Git user
       run: |
@@ -20,4 +22,4 @@ jobs:
     - name: Create Release
       run: ./gradlew release -Dorg.gradle.console=plain
       env:
-        accessToken: ${{ secrets.DEPLOY_TOKEN }}
+        repositoryToken: ${{ secrets.DEPLOY_TOKEN }}
