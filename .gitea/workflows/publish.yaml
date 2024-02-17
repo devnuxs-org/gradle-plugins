@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    uses: ./.gitea/workflows/build.yml
+    uses: ./.gitea/workflows/build.yaml
     
   publish:
     runs-on: linux
