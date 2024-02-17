@@ -1,16 +1,14 @@
-name: Build
-# on: [push, pull_request]
+name: Publish
 on:
   push:
-    branches:
+    tags:
       - '*'
-  pull_request:
-    branches:
-      - '*'
-  workflow_call:
 
 jobs:
   build:
+    uses: ./.github/workflows/build.yml
+    
+  publish:
     runs-on: linux
     steps:
     - uses: actions/checkout@v2
@@ -26,5 +24,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Build with Gradle
-      run: ./gradlew build -Dorg.gradle.console=plain
+    - name: Publish to GitHub Packages
+      run: ./gradlew publish -Dorg.gradle.console=plain
+      env:
+        accessToken: ${{ secrets.DEPLOY_TOKEN }}
