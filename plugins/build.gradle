@@ -27,43 +27,6 @@ dependencies {
     implementation "org.openapitools:openapi-generator-gradle-plugin:${openApiGeneratorVersion}"
 }
 
-gradlePlugin {
-    plugins {
-        simplePlugin {
-            id = "org.devnuxs.spotless"
-            implementationClass = "org.devnuxs.spotless.OrgDevnuxsSpotlessPlugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.java"
-            implementationClass = "org.devnuxs.java.OrgDevnuxsJavaPlugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.java17"
-            implementationClass = "org.devnuxs.java17.OrgDevnuxsJava17Plugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.java21"
-            implementationClass = "org.devnuxs.java21.OrgDevnuxsJava21Plugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.openapi"
-            implementationClass = "org.devnuxs.openapi.OrgDevnuxsOpenApiPlugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.quarkus-k8"
-            implementationClass = "org.devnuxs.quarkus.k8.OrgDevnuxsQuarkusK8Plugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.quarkus"
-            implementationClass = "org.devnuxs.quarkus.OrgDevnuxsQuarkusPlugin"
-        }
-        simplePlugin {
-            id = "org.devnuxs.repo"
-            implementationClass = "org.devnuxs.repo.OrgDevnuxsRepoPlugin"
-        }
-    }
-}
-
 
 publishing {
     // other settings of publication

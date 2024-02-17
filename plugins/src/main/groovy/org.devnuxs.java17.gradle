@@ -1,5 +1,5 @@
 plugins {
-    id 'org.devnux.java'
+    id 'org.devnuxs.java'
 }
 
 java {
