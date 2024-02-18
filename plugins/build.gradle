@@ -14,7 +14,6 @@ plugins {
 }
 
 group = 'org.devnuxs'
-version = scmVersion.version
 
 repositories {
     gradlePluginPortal()
@@ -47,3 +46,12 @@ publishing {
         }
     }
 }
+
+scmVersion {
+    tag {
+        prefix.set("v")
+        versionSeparator = ""
+    }
+}
+
+version = scmVersion.version
