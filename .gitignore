@@ -7,3 +7,5 @@ build
 .envrc
 
 .vscode
+
+bin
