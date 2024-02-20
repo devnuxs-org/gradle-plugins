@@ -1,0 +1,25 @@
+# .github/actions/build/action.yaml
+name: 'Build'
+description: 'Build the project with Gradle'
+inputs:
+  java-version:
+    description: 'Java version'
+    required: true
+    default: '21'
+  command:
+    description: 'Gradle command'
+    required: false
+    default: 'build'
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
+        cache: 'gradle'
+        cache-dependency-path: | # optional
+          sub-project/*.gradle*
+          sub-project/**/gradle-wrapper.properties
+    - run: ./gradlew ${{ inputs.command }} --no-daemon -Dorg.gradle.console=plain

@@ -16,7 +16,6 @@ jobs:
     runs-on: linux
     steps:
     - uses: actions/checkout@v4
-
-    - uses: ./.gitea/actions/build
+    - uses: ./.gitea/actions/gradle
       with:
-        java-version: 21
+        command: build
