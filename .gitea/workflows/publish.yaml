@@ -3,12 +3,17 @@ on:
   push:
     branches:
       - main
+      - feature/#10-add-changelog-generation
     tags:
       - '*'
 
 jobs:
   build:
-    uses: ./.gitea/workflows/build.yaml
+    runs-on: linux
+    steps:
+      - uses: ./.gitea/actions/build@feature/#10-add-changelog-generation
+        with:
+          java-version: 21
     
   publish:
     runs-on: linux
