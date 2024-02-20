@@ -5,7 +5,7 @@ plugins {
 }
 
 group "${devnuxsGroupId}"
-version "${devnuxsVersion}"
+version findProperty('devnuxsVersion') ?: '0'
 
 tasks.compileJava {
     dependsOn("spotlessApply")
