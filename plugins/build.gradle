@@ -11,6 +11,7 @@ plugins {
     id 'groovy-gradle-plugin'
     id 'maven-publish'
     id 'pl.allegro.tech.build.axion-release' version '1.15.1'
+    id 'com.diffplug.spotless-changelog' version '3.0.2'
 }
 
 group = 'org.devnuxs'
@@ -56,3 +57,8 @@ scmVersion {
 }
 
 version = scmVersion.version
+
+spotlessChangelog { // only necessary if you need to change the defaults below
+  changelogFile 'CHANGELOG.md'
+  enforceCheck true
+}
