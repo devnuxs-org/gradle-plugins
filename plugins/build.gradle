@@ -11,7 +11,7 @@ plugins {
     id 'groovy-gradle-plugin'
     id 'maven-publish'
     id 'pl.allegro.tech.build.axion-release' version '1.15.1'
-    id 'com.diffplug.spotless-changelog' version '3.0.2'
+    id 'se.bjurr.gitchangelog.git-changelog-gradle-plugin' version '2.1.0'
 }
 
 group = 'org.devnuxs'
@@ -57,12 +57,3 @@ scmVersion {
 }
 
 version = scmVersion.version
-
-spotlessChangelog { 
-  tagPrefix 'v'
-  remote 'origin'
-  branch 'main'
-  changelogFile 'CHANGELOG.md'
-  enforceCheck true
-  
-}
