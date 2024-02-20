@@ -58,7 +58,11 @@ scmVersion {
 
 version = scmVersion.version
 
-spotlessChangelog { // only necessary if you need to change the defaults below
+spotlessChangelog { 
+  tagPrefix 'v'
+  remote 'origin'
+  branch 'main'
   changelogFile 'CHANGELOG.md'
   enforceCheck true
+  
 }
