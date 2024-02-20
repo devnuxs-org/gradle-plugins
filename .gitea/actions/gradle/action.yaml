@@ -19,7 +19,7 @@ runs:
         distribution: 'temurin'
         java-version: '21'
         cache: 'gradle'
-        cache-dependency-path: | # optional
-          sub-project/*.gradle*
-          sub-project/**/gradle-wrapper.properties
+        cache-dependency-path: | # regex to match all sub-projects
+          **/*.gradle*
+          **/gradle-wrapper.properties
     - run: ./gradlew ${{ inputs.command }} --no-daemon -Dorg.gradle.console=plain
