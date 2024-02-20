@@ -27,60 +27,44 @@ gradle wrapper plugins with good default settings
 
 
 # How to use
-## General plugins
-### Java plugin
-```groovy
-plugins {
-    id 'org.devnuxs.java' version '1.0.0'
+
+If you want to use the plugins without version, you can use the following code in your settings.gradle file:
+
+Add the following code to your gradle.properties file:
+```properties (gradle.properties)
+devnuxsPluginVersion=0.1.1
+```
+
+Add the following code to your settings.gradle file:
+```groovy (settings.gradle)
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url 'https://git.drmaniac.de/api/packages/repository/maven'
+        }
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.namespace == 'org.devnuxs') {
+                useModule("org.devnuxs.${requested.id.name}:org.devnuxs.${requested.id.name}.gradle.plugin:${devnuxsPluginVersion}")
+            }
+        }
+    }
 }
 ```
-### Java 17 plugin
-```groovy
+
+Then you can use the plugins without version in your build.gradle file:
+```groovy (build.gradle)
 plugins {
-    id 'org.devnuxs.java17' version '1.0.0'
-}
-```
-### Java 21 plugin
-```groovy
-plugins {
-    id 'org.devnuxs.java21' version '1.0.0'
-}
-```
-### Spotless plugin
-```groovy
-plugins {
-    id 'org.devnuxs.spotless' version '1.0.0'
-}
-```
-### Release plugin
-```groovy
-plugins {
-    id 'org.devnuxs.release' version '1.0.0'
-}
-```
-### Repository plugin
-```groovy
-plugins {
-    id 'org.devnuxs.repo' version '1.0.0'
-}
-```
-## Quarkus plugins
-### Quarkus plugin
-```groovy
-plugins {
-    id 'org.devnuxs.quarkus' version '1.0.0'
-}
-```
-### Quarkus k8 plugin
-```groovy
-plugins {
-    id 'org.devnuxs.quarkus-k8' version '1.0.0'
-}
-```
-## Generator plugins
-### OpenAPI plugin
-```groovy
-plugins {
-    id 'org.devnuxs.openapi' version '1.0.0'
+    id 'org.devnuxs.java'
+    id 'org.devnuxs.java17'
+    id 'org.devnuxs.java21'
+    id 'org.devnuxs.spotless'
+    id 'org.devnuxs.release'
+    id 'org.devnuxs.repo'
+    id 'org.devnuxs.quarkus'
+    id 'org.devnuxs.quarkus-k8'
+    id 'org.devnuxs.openapi'
 }
 ```
