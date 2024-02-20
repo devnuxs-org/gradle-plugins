@@ -15,6 +15,6 @@ jobs:
   build:
     runs-on: linux
     steps:
-    - uses: ./.gitea/actions/build@feature/#10-add-changelog-generation
+    - uses: ./.gitea/actions/build@main
       with:
         java-version: 21
