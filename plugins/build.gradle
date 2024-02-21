@@ -10,7 +10,7 @@ plugins {
     // Apply the groovy Plugin to add support for Groovy.
     id 'groovy-gradle-plugin'
     id 'maven-publish'
-    id 'pl.allegro.tech.build.axion-release' version '1.15.1'
+    id 'pl.allegro.tech.build.axion-release' version '1.17.0'
     id 'se.bjurr.gitchangelog.git-changelog-gradle-plugin' version '2.1.0'
 }
 
@@ -27,6 +27,7 @@ dependencies {
     implementation "io.quarkus:io.quarkus.gradle.plugin:${quarkusPlatformVersion}"
     implementation "org.openapitools:openapi-generator-gradle-plugin:${openApiGeneratorVersion}"
     implementation "pl.allegro.tech.build:axion-release-plugin:${axionReleaseVersion}"
+    implementation "se.bjurr.gitchangelog:git-changelog-gradle-plugin:${gitChangelogVersion}"
 }
 
 
@@ -59,7 +60,7 @@ scmVersion {
 version = scmVersion.version
 
 task gitChangelogTask(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
-     templateContent = new File('./changelog.mustache').getText('UTF-8');
-     ignoreCommitsWithoutIssue = true;
-     removeIssueFromMessage = false;
-} 
+    templateContent = new File('./changelog.mustache').getText('UTF-8');
+    ignoreCommitsWithoutIssue = true;
+    removeIssueFromMessage = false;
+}

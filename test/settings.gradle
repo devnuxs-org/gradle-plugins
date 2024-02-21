@@ -1,0 +1,20 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url 'https://git.drmaniac.de/api/packages/repository/maven'
+        }
+        mavenLocal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.namespace == 'org.devnuxs') {
+                useModule("org.devnuxs.${requested.id.name}:org.devnuxs.${requested.id.name}.gradle.plugin:${devnuxsPluginVersion}")
+            }
+        }
+    }
+}
+
+rootProject.name = 'Gradle build definitions test'
+
+include 'changelog-test'

@@ -1,0 +1,30 @@
+{{#tags}}
+{{#ifReleaseTag .}}
+## [{{name}}](https://git.drmaniac.de/qloud/gradle-plugins/compare/{{name}}) ({{tagDate .}})
+
+
+### Features
+    {{#commits}}
+      {{#ifCommitType . type='feat'}}
+ - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+      {{/ifCommitType}}
+    {{/commits}}
+
+### Bug Fixes
+    {{#commits}}
+      {{#ifCommitType . type='fix'}}
+ - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+      {{/ifCommitType}}
+    {{/commits}}
+
+{{#ifContainsTypeOtherThan commits type='feat,fix'}}
+### Other
+
+    {{#commits}}
+ - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{messageTitle}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/commits}}
+  {{/ifContainsTypeOtherThan}}
+
+
+{{/ifReleaseTag}}
+{{/tags}}

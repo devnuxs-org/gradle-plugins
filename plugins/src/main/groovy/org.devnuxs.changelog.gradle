@@ -1,0 +1,40 @@
+plugins {
+  id 'se.bjurr.gitchangelog.git-changelog-gradle-plugin'
+}
+
+task changelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
+  group "devnuxs"
+  templateContent = """
+{{#tags}}
+{{#ifReleaseTag .}}
+## [{{name}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{name}}) ({{tagDate .}})
+
+
+### Features
+    {{#commits}}
+      {{#ifCommitType . type='feat'}}
+                                                                                               
+ - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{hashFull}}))
+      {{/ifCommitType}}
+    {{/commits}}
+
+### Bug Fixes
+    {{#commits}}
+      {{#ifCommitType . type='fix'}}
+ - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{hashFull}}))
+      {{/ifCommitType}}
+    {{/commits}}
+
+{{#ifContainsTypeOtherThan commits type='feat,fix'}}
+### Other
+
+    {{#commits}}
+ - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{hashFull}}))
+    {{/commits}}
+  {{/ifContainsTypeOtherThan}}
+
+
+{{/ifReleaseTag}}
+{{/tags}}
+  """;
+}

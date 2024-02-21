@@ -23,6 +23,7 @@ gradle wrapper plugins with good default settings
 | Plugin | Description | Includes | Based on |
 | ------ | ----------- | -------- | -------- |
 | org.devnuxs.openapi | OpenAPI plugin to generate client and server code | | org.openapi.generator |
+| org.devnuxs.changelog | Changelog plugin to generate changelog from git commits | | - |
 
 
 
@@ -66,5 +67,6 @@ plugins {
     id 'org.devnuxs.quarkus'
     id 'org.devnuxs.quarkus-k8'
     id 'org.devnuxs.openapi'
+    id 'org.devnuxs.changelog'
 }
 ```
