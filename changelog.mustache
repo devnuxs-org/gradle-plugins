@@ -5,25 +5,53 @@
 ## [{{name}}](https://git.drmaniac.de/qloud/gradle-plugins/compare/{{name}}) ({{tagDate .}})
 {{/ifEquals}}
 
+{{#ifContainsType commits type='feat'}}
 ### Features
     {{#commits}}
-      {{#ifCommitType . type='feat'}}
- - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
-      {{/ifCommitType}}
+    {{#ifCommitType . type='feat'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
     {{/commits}}
+{{/ifContainsType}}
 
+{{#ifContainsType commits type='fix'}}
 ### Bug Fixes
     {{#commits}}
-      {{#ifCommitType . type='fix'}}
- - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
-      {{/ifCommitType}}
+    {{#ifCommitType . type='fix'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
     {{/commits}}
+{{/ifContainsType}}
 
-{{#ifContainsTypeOtherThan commits type='feat,fix'}}
+{{#ifContainsTypeOtherThan commits type='feat, fix, chore'}}
 ### Other
-
     {{#commits}}
- - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{messageTitle}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{#ifCommitType . type='chore'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} chore: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='docs'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} docs: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='style'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} style: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='refactor'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} refactor: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='test'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} test: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='build'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} build: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='ci'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} ci: {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type=''}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{messageTitle}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
+    {{/ifCommitType}}
     {{/commits}}
-  {{/ifContainsTypeOtherThan}}
+{{/ifContainsTypeOtherThan}}
+<br />
+<br />
 {{/tags}}

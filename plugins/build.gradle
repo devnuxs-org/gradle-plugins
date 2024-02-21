@@ -59,8 +59,8 @@ scmVersion {
 
 version = scmVersion.version
 
-task gitChangelogTask(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
+task changeLog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
     templateContent = new File('./changelog.mustache').getText('UTF-8');
-    ignoreCommitsWithoutIssue = true;
+    ignoreCommitsWithoutIssue = false;
     removeIssueFromMessage = false;
 }
