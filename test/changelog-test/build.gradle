@@ -3,7 +3,4 @@ plugins {
 }
 
 tasks.named('changelog') {
-  templateContent="""
-  # Changelog TEST
-  """
 }

@@ -1,11 +1,15 @@
-## Unreleased
+# Changelog
+## [v0.1.2](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.2) (2024-02-21)
 
 ### Features
   -  #15 - Added changelog generation plugin (#16) ([cae4f1f745c5c38](https://git.drmaniac.de/qloud/gradle-plugins/commit/cae4f1f745c5c38354807d2017c0f12866b83825))
   -  #10 - add-changelog-generation (#14) ([a24f966c5b598b5](https://git.drmaniac.de/qloud/gradle-plugins/commit/a24f966c5b598b5ca0d34b1d0cacc6acc5f4d189))
 
+### Bug Fixes
+  -  Fixes conventional commits detection ([dfc010f2afeefc5](https://git.drmaniac.de/qloud/gradle-plugins/commit/dfc010f2afeefc587254a7ceec113fd8b13dc0e2))
 
 ### Other
+  -  Update changelog template ([138f2b437cc747b](https://git.drmaniac.de/qloud/gradle-plugins/commit/138f2b437cc747bb053ab5c3b497978f29fadece))
   -  chore: #15 - changelog add unreleased ([ade58d2470fe823](https://git.drmaniac.de/qloud/gradle-plugins/commit/ade58d2470fe82390d039da67784b8bd2eab6c91))
 <br />
 <br />

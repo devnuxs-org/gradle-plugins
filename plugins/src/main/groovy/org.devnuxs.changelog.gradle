@@ -5,36 +5,63 @@ plugins {
 task changelog(type: se.bjurr.gitchangelog.plugin.gradle.GitChangelogTask) {
   group "devnuxs"
   templateContent = """
+# Changelog
 {{#tags}}
-{{#ifReleaseTag .}}
-## [{{name}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{name}}) ({{tagDate .}})
+{{#ifEquals name "Unreleased"}}
+## Unreleased
+{{else}} 
+## [{{name}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/releases/tag/{{name}}) ({{tagDate .}})
+{{/ifEquals}}
 
-
+{{#ifContainsType commits type='feat'}}
 ### Features
     {{#commits}}
-      {{#ifCommitType . type='feat'}}
-                                                                                               
- - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{hashFull}}))
-      {{/ifCommitType}}
+    {{#ifCommitType . type='feat'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
     {{/commits}}
+{{/ifContainsType}}
 
+{{#ifContainsType commits type='fix'}}
 ### Bug Fixes
     {{#commits}}
-      {{#ifCommitType . type='fix'}}
- - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{hashFull}}))
-      {{/ifCommitType}}
+    {{#ifCommitType . type='fix'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
     {{/commits}}
+{{/ifContainsType}}
 
-{{#ifContainsTypeOtherThan commits type='feat,fix'}}
+{{#ifContainsTypeOtherThan commits type='feat, fix, chore'}}
 ### Other
-
     {{#commits}}
- - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/{{hashFull}}))
+    {{#ifCommitType . type='chore'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} chore: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='docs'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} docs: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='style'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} style: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='refactor'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} refactor: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='test'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} test: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='build'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} build: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type='ci'}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} ci: {{{commitDescription .}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
+    {{#ifCommitType . type=''}}
+  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{{messageTitle}}} ([{{hash}}](${project.properties['gitBaseUrl']}/${project.properties['gitProjectPath']}/commit/{{hashFull}}))
+    {{/ifCommitType}}
     {{/commits}}
-  {{/ifContainsTypeOtherThan}}
-
-
-{{/ifReleaseTag}}
+{{/ifContainsTypeOtherThan}}
+<br />
+<br />
 {{/tags}}
   """;
 }
