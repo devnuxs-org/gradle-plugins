@@ -1,7 +1,9 @@
 {{#tags}}
-{{#ifReleaseTag .}}
+{{#ifEquals name "Unreleased"}}
+## Unreleased
+{{else}} 
 ## [{{name}}](https://git.drmaniac.de/qloud/gradle-plugins/compare/{{name}}) ({{tagDate .}})
-
+{{/ifEquals}}
 
 ### Features
     {{#commits}}
@@ -24,7 +26,4 @@
  - {{#eachCommitScope .}} **{{.}}** {{/eachCommitScope}} {{messageTitle}} {{{commitDescription .}}} ([{{hash}}](https://git.drmaniac.de/qloud/gradle-plugins/commit/{{hashFull}}))
     {{/commits}}
   {{/ifContainsTypeOtherThan}}
-
-
-{{/ifReleaseTag}}
 {{/tags}}

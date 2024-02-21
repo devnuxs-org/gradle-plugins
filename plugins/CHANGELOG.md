@@ -1,5 +1,14 @@
-## [v0.1.1](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.1) (2024-02-20)
+## Unreleased
 
+### Features
+
+### Bug Fixes
+
+### Other
+
+ -  feat(#15): Added changelog generation plugin (#16)  ([626b05eeaa60a9b](https://git.drmaniac.de/qloud/gradle-plugins/commit/626b05eeaa60a9b8eeb5239e19a0e3dc65ef5879))
+ -  feature/#10-add-changelog-generation (#14)  ([35f31a490f1fa1a](https://git.drmaniac.de/qloud/gradle-plugins/commit/35f31a490f1fa1aa08a5f4b7c9b0c84631246f58))
+## [v0.1.1](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.1) (2024-02-20)
 
 ### Features
 
@@ -26,10 +35,7 @@
  -  Update gradle-plugins changelog  ([0e8317580e7b6a7](https://git.drmaniac.de/qloud/gradle-plugins/commit/0e8317580e7b6a7b7bc082c99efedf6e1d44c496))
  -  Update plugin versions and add plugin repositories  ([03852dd1c27437e](https://git.drmaniac.de/qloud/gradle-plugins/commit/03852dd1c27437e92d11ded3e58b84e04848e6ef))
  -  feature/#1 (#4)  ([eff0cb05e06bb7a](https://git.drmaniac.de/qloud/gradle-plugins/commit/eff0cb05e06bb7a19c55371351b17312a07860fd))
-
-
 ## [v0.1.0](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.0) (2024-02-18)
-
 
 ### Features
 
@@ -57,5 +63,3 @@
  -  Add build workflow for GitHub Actions  ([ea3083c169878e6](https://git.drmaniac.de/qloud/gradle-plugins/commit/ea3083c169878e62bac2848808d3b71e71d063ae))
  -  initial commit  ([9fdb25838ee428f](https://git.drmaniac.de/qloud/gradle-plugins/commit/9fdb25838ee428fafa277191b35b9c692fa242f2))
  -  Initial commit  ([0c05ea3a084799a](https://git.drmaniac.de/qloud/gradle-plugins/commit/0c05ea3a084799a879c0610e1fc9417371d362f2))
-
-
