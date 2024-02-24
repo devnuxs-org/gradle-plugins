@@ -3,7 +3,11 @@ on:
   push:
     branches:
       - main
-      - feature/#10-add-changelog-generation
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - main
     tags:
       - '*'
 
