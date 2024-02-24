@@ -55,6 +55,9 @@ scmVersion {
         prefix.set("v")
         versionSeparator = ""
     }
+    nextVersion {
+        suffix = "NEXT"
+    }
 }
 
 version = scmVersion.version
