@@ -21,3 +21,5 @@ jobs:
           command: publish 
         env:
           accessToken: ${{ secrets.DEPLOY_TOKEN }}
+          GITTEA_GITHUB_TOKEN: ${{ secrets.GITTEA_GITHUB_TOKEN }}
+          GITTEA_GITHUB_ACTOR: ${{ secrets.GITTEA_GITHUB_ACTOR }}

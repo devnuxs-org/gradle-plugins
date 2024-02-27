@@ -47,6 +47,14 @@ publishing {
                 header(HttpHeaderAuthentication)
             }
         }
+        maven {
+            name = "GitHub"
+            url = uri("https://maven.pkg.github.com/devnuxs-org/gradle-plugins")
+            credentials {
+                username = System.getenv('GITTEA_GITHUB_ACTOR')
+                password = System.getenv('GITTEA_GITHUB_TOKEN')
+            }
+        }
     }
 }
 
