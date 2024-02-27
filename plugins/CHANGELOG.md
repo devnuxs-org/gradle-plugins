@@ -1,4 +1,15 @@
 # Changelog
+## Unreleased
+
+### Features
+  -  Change nextVersion marker from alpha to NEXT (#18) ([19ae166a9ded3c1](https://git.drmaniac.de/qloud/gradle-plugins/commit/19ae166a9ded3c19b3b3a6e6f7193a7b3d6f33f2))
+
+
+### Other
+  -  chore: Add GitHub Maven repository configuration ([850b9c53247bf08](https://git.drmaniac.de/qloud/gradle-plugins/commit/850b9c53247bf081c35d30e807ca549c69df4727))
+  -  ci: Update publish.yaml to include tags in the workflow ([fbb056ed285155e](https://git.drmaniac.de/qloud/gradle-plugins/commit/fbb056ed285155ee892c15e87d88cc45b93d7fe4))
+<br />
+<br />
 ## [v0.1.2](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.2) (2024-02-21)
 
 ### Features
@@ -9,7 +20,7 @@
   -  Fixes conventional commits detection ([dfc010f2afeefc5](https://git.drmaniac.de/qloud/gradle-plugins/commit/dfc010f2afeefc587254a7ceec113fd8b13dc0e2))
 
 ### Other
-  -  Update changelog template ([138f2b437cc747b](https://git.drmaniac.de/qloud/gradle-plugins/commit/138f2b437cc747bb053ab5c3b497978f29fadece))
+  -  Update changelog template ([4bbcc4aad97263c](https://git.drmaniac.de/qloud/gradle-plugins/commit/4bbcc4aad97263c084289cab13dd0e77f1ed449e))
   -  chore: #15 - changelog add unreleased ([ade58d2470fe823](https://git.drmaniac.de/qloud/gradle-plugins/commit/ade58d2470fe82390d039da67784b8bd2eab6c91))
 <br />
 <br />
