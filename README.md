@@ -34,7 +34,7 @@ If you want to use the plugins without version, you can use the following code i
 
 Add the following code to your gradle.properties file:
 ```properties (gradle.properties)
-devnuxsPluginVersion=0.1.1
+devnuxsPluginVersion=0.1.4
 ```
 
 Add the following code to your settings.gradle file:
