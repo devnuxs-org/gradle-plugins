@@ -1,11 +1,23 @@
 # Changelog
-## Unreleased
+## [v0.1.4](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.4) (2024-03-22)
+
+### Features
+  -  Use JDK 17 a build for the plugins (#22) ([6243ba738615fb6](https://git.drmaniac.de/qloud/gradle-plugins/commit/6243ba738615fb62c57883daaf3b8a636a93d046))
+  -  Use JDK 17 a build for the plugins (#21) ([a68c2e74f8b6d73](https://git.drmaniac.de/qloud/gradle-plugins/commit/a68c2e74f8b6d73ff04958d0803e85738381349c))
+
+
+### Other
+  -  Update dependencies versions in gradle.properties ([6859b6cde0da48a](https://git.drmaniac.de/qloud/gradle-plugins/commit/6859b6cde0da48aa12de42ce99ef28339d44d9d3))
+<br />
+<br />
+## [v0.1.3](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.3) (2024-02-27)
 
 ### Features
   -  Change nextVersion marker from alpha to NEXT (#18) ([19ae166a9ded3c1](https://git.drmaniac.de/qloud/gradle-plugins/commit/19ae166a9ded3c19b3b3a6e6f7193a7b3d6f33f2))
 
 
 ### Other
+  -  docs: changelog update ([9c22ec66add2c29](https://git.drmaniac.de/qloud/gradle-plugins/commit/9c22ec66add2c29977737c160bb19a9b8156d188))
   -  chore: Add GitHub Maven repository configuration ([850b9c53247bf08](https://git.drmaniac.de/qloud/gradle-plugins/commit/850b9c53247bf081c35d30e807ca549c69df4727))
   -  ci: Update publish.yaml to include tags in the workflow ([fbb056ed285155e](https://git.drmaniac.de/qloud/gradle-plugins/commit/fbb056ed285155ee892c15e87d88cc45b93d7fe4))
 <br />
