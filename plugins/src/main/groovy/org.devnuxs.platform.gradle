@@ -1,0 +1,13 @@
+ext {
+    // plugin versions
+    spotlessPluginVersion='6.25.0'
+    quarkusPluginVersion='3.9.1'
+    openApiGeneratorVersion='7.4.0'
+    axionReleaseVersion='1.17.0'
+    gitChangelogVersion='2.1.0'
+    
+    // platform versions
+    quarkusPlatformVersion='3.9.1'
+
+    // dependencies versions
+}
