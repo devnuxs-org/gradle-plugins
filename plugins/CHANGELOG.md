@@ -1,4 +1,16 @@
 # Changelog
+## [v0.1.5](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.5) (2024-04-02)
+
+### Features
+  -  enforce dependent versions from plugins (#25) ([8ab8dec5d2ee19b](https://git.drmaniac.de/qloud/gradle-plugins/commit/8ab8dec5d2ee19b760b2f57f185639a26a716605))
+  -  enforce dependent versions from plugins (#24) ([53fbbb963f7dd78](https://git.drmaniac.de/qloud/gradle-plugins/commit/53fbbb963f7dd7856b39b2eec49a4526e4833502))
+
+
+### Other
+  -  Update devnuxsPluginVersion to 0.1.4 ([5b96a2159d83933](https://git.drmaniac.de/qloud/gradle-plugins/commit/5b96a2159d83933b569533ac8595fd099dea1206))
+  -  update changelog v0.1.4 ([83f6045e9b77c92](https://git.drmaniac.de/qloud/gradle-plugins/commit/83f6045e9b77c92c28d2816b9893f3decf4b5faa))
+<br />
+<br />
 ## [v0.1.4](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.4) (2024-03-22)
 
 ### Features
