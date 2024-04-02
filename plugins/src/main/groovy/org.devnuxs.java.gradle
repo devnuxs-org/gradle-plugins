@@ -1,7 +1,9 @@
 plugins {
     id 'org.devnuxs.repo'
-    id 'java'
     id 'org.devnuxs.spotless'
+    id 'org.devnuxs.platform'
+    id 'java'
+
 }
 
 group "${devnuxsGroupId}"
