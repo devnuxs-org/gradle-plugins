@@ -1,4 +1,13 @@
 # Changelog
+## Unreleased
+
+
+
+### Other
+  -  chore: Bump versions of several plugins (#27) ([6b44dcd6e76b0fd](https://git.drmaniac.de/qloud/gradle-plugins/commit/6b44dcd6e76b0fd4ce65f488692e9418c52e73a5))
+  -  build: Update Changelog V0.1.5 ([cefcf6d4faabe35](https://git.drmaniac.de/qloud/gradle-plugins/commit/cefcf6d4faabe353d66366ee685e08a99f7ec28e))
+<br />
+<br />
 ## [v0.1.5](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.5) (2024-04-02)
 
 ### Features
