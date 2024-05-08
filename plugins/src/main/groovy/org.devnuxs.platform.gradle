@@ -10,4 +10,5 @@ ext {
     quarkusPlatformVersion='3.10.0'
 
     // dependencies versions
+    smallRyeOpenApiVersion='3.10.0'
 }

@@ -1,0 +1,11 @@
+plugins {
+    id 'org.devnuxs.java21'
+    id 'org.devnuxs.platform'
+}
+
+
+dependencies {
+    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusPlatformVersion}"))
+    implementation "io.smallrye:smallrye-open-api:${smallRyeOpenApiVersion}"
+    implementation 'jakarta.ws.rs:jakarta.ws.rs-api'
+}
