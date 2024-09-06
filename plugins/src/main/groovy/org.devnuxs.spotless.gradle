@@ -27,6 +27,11 @@ spotless {
         simple()
     }
 
+    yaml {
+        target("**/*.yml", "**/*.yaml")
+        jackson()
+    }
+
     java {
         // apply a specific flavor of google-java-format
         palantirJavaFormat().style("GOOGLE")
