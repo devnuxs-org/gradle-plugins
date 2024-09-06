@@ -1,9 +1,23 @@
 # Changelog
-## Unreleased
+## [v1.0.0](https://git.drmaniac.de/qloud/gradle-plugins/compare/v1.0.0) (2024-09-06)
 
 
 
 ### Other
+  -  chore: Update plugin and dependency versions ([6b1a21222022211](https://git.drmaniac.de/qloud/gradle-plugins/commit/6b1a2122202221167c12b9041ed769dde4a606ad))
+  -  chore: Update Java version to 21 as minimun requirement to use this plugin ([a77e3738ab60d48](https://git.drmaniac.de/qloud/gradle-plugins/commit/a77e3738ab60d488effbefa50def60b8b96c3e01))
+  -  chore: Update Gradle distribution URL to version 8.10 ([1275a01f8ab207e](https://git.drmaniac.de/qloud/gradle-plugins/commit/1275a01f8ab207e00bfd07dacf5e9fadb07a2165))
+  -  chore: Remove commented out code for GitHub Maven repository ([c5cd1ec4e486f48](https://git.drmaniac.de/qloud/gradle-plugins/commit/c5cd1ec4e486f4815162e7cc00cad4b5f1e58c63))
+  -  chore: Remove commented out code for GitHub Maven repository ([fed47847c551d7d](https://git.drmaniac.de/qloud/gradle-plugins/commit/fed47847c551d7dfee0f4535fe5d59e2ad49b918))
+  -  chore: Update plugin versions ([a8ebcc795857b71](https://git.drmaniac.de/qloud/gradle-plugins/commit/a8ebcc795857b71243124ee50230dc58a29d1500))
+<br />
+<br />
+## [v0.1.6](https://git.drmaniac.de/qloud/gradle-plugins/compare/v0.1.6) (2024-05-03)
+
+
+
+### Other
+  -  docs: Update changelog ([4a57535cb7e4cea](https://git.drmaniac.de/qloud/gradle-plugins/commit/4a57535cb7e4ceab863c4ccac8f5f8fe80673369))
   -  chore: Bump versions of several plugins (#27) ([6b44dcd6e76b0fd](https://git.drmaniac.de/qloud/gradle-plugins/commit/6b44dcd6e76b0fd4ce65f488692e9418c52e73a5))
   -  build: Update Changelog V0.1.5 ([cefcf6d4faabe35](https://git.drmaniac.de/qloud/gradle-plugins/commit/cefcf6d4faabe353d66366ee685e08a99f7ec28e))
 <br />
