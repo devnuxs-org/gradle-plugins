@@ -73,6 +73,7 @@ publishing {
 }
 
 scmVersion {
+    versionIncrementer('incrementMinor')
     tag {
         prefix.set("v")
         versionSeparator = ""
