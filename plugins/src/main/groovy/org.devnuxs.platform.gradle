@@ -5,6 +5,7 @@ ext {
     openApiGeneratorVersion='7.8.0' // https://github.com/OpenAPITools/openapi-generator/releases
     axionReleaseVersion='1.18.8'    // https://github.com/allegro/axion-release-plugin/releases
     gitChangelogVersion='2.1.2'     // https://github.com/tomasbjerre/git-changelog-gradle-plugin/tags
+    jandexVersion='2.0.0'           // https://github.com/kordamp/jandex-gradle-plugin/releases/
     
     // platform versions
     quarkusPlatformVersion='3.14.2' // https://quarkus.io/blog/tag/release/

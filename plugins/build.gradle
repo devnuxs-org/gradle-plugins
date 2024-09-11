@@ -41,6 +41,7 @@ dependencies {
     implementation "org.openapitools:openapi-generator-gradle-plugin:${openApiGeneratorVersion}"
     implementation "pl.allegro.tech.build:axion-release-plugin:${axionReleaseVersion}"
     implementation "se.bjurr.gitchangelog:git-changelog-gradle-plugin:${gitChangelogVersion}"
+    implementation "org.kordamp.gradle:jandex-gradle-plugin:${jandexVersion}"
 }
 
 
