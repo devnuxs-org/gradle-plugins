@@ -18,3 +18,11 @@ tasks.compileJava {
 compileTestJava {
     options.encoding = 'UTF-8'
 }
+
+testing {
+    suites {
+        test {
+            useJUnitJupiter("${jUnitVersion}")
+        }
+    }
+}

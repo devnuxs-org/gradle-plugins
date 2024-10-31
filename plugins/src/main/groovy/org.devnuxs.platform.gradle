@@ -12,4 +12,6 @@ ext {
 
     // dependencies versions
     smallRyeOpenApiVersion='4.0.1' // https://github.com/smallrye/smallrye-open-api/releases
+
+    jUnitVersion='5.11.3'            //https://github.com/junit-team/junit5/releases
 }
